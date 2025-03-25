@@ -1,0 +1,105 @@
+/* Font import */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 19 49% 96%;
+    --foreground: 24 12% 15%;
+
+    --card: 19 49% 96%;
+    --card-foreground: 24 12% 15%;
+
+    --popover: 19 49% 96%;
+    --popover-foreground: 24 12% 15%;
+
+    --primary: 25 73% 38%;
+    --primary-foreground: 19 49% 96%;
+
+    --secondary: 30 47% 55%;
+    --secondary-foreground: 19 49% 96%;
+
+    --muted: 24 5% 64%;
+    --muted-foreground: 24 8% 38%;
+
+    --accent: 30 36% 76%;
+    --accent-foreground: 24 12% 15%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 19 49% 96%;
+
+    --border: 24 5% 64%;
+    --input: 24 5% 64%;
+    --ring: 25 73% 38%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 24 12% 15%;
+    --foreground: 19 49% 96%;
+
+    --card: 24 12% 15%;
+    --card-foreground: 19 49% 96%;
+
+    --popover: 24 12% 15%;
+    --popover-foreground: 19 49% 96%;
+
+    --primary: 25 73% 38%;
+    --primary-foreground: 19 49% 96%;
+
+    --secondary: 30 47% 55%;
+    --secondary-foreground: 19 49% 96%;
+
+    --muted: 24 5% 30%;
+    --muted-foreground: 24 5% 64%;
+
+    --accent: 30 36% 30%;
+    --accent-foreground: 19 49% 96%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 19 49% 96%;
+
+    --border: 24 5% 30%;
+    --input: 24 5% 30%;
+    --ring: 25 73% 38%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-alaamal-light text-alaamal-dark font-tajawal;
+    direction: rtl;
+  }
+}
+
+/* Custom styles */
+@layer components {
+  .nav-link {
+    @apply text-alaamal-dark font-medium hover:text-alaamal-primary transition-colors;
+  }
+
+  .service-card {
+    @apply bg-white rounded-lg p-4 shadow-md transition-all hover:shadow-lg;
+  }
+
+  .service-icon {
+    @apply text-alaamal-primary text-2xl;
+  }
+
+  .button-primary {
+    @apply bg-alaamal-primary text-white rounded-full py-2 px-6 hover:bg-opacity-90 transition-colors;
+  }
+}
+
+/* Set default font-family */
+html {
+  font-family: 'Tajawal', sans-serif;
+}
